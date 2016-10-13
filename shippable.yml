@@ -1,5 +1,5 @@
 language: node_js
-#build_image: node:argon
+build_image: drydock/u14nod
 build:
   ci:
     - echo 'CI is running'
