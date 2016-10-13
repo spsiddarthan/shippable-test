@@ -3,6 +3,8 @@ build_image: node:argon
 build:
   ci:
     - echo 'CI is running'
+    - npm install
+    - npm start
   pre_ci:
     - docker pull vivex/sample
     - docker build -t="quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
