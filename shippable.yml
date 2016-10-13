@@ -4,6 +4,7 @@ build:
   ci:
     - echo 'CI is running'
   pre_ci:
+    - docker pull vivex/sample
     - docker build -t="quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
     - docker build -t="vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
     - docker push quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER
