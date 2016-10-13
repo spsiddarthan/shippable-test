@@ -11,6 +11,8 @@ build:
     - docker build -t="vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
     - docker push quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER
     - docker push vivex/node-web-app:$BRANCH.$BUILD_NUMBER
+    - docker tag vivex/node-web-app:$BRANCH.$BUILD_NUMBER 035214584383.dkr.ecr.us-east-1.amazonaws.com/node-web-app:$BRANCH.$BUILD_NUMBER
+    - docker push 035214584383.dkr.ecr.us-east-1.amazonaws.com/node-web-app:$BRANCH.$BUILD_NUMBER
 
 integrations:
   hub:
@@ -18,3 +20,5 @@ integrations:
       type: quay.io
     - integrationName: "docker-vivex"
       type: docker
+    - integrationName: "ecr-vivex"
+      type: ecr
