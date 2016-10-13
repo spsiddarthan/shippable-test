@@ -1,0 +1,9 @@
+language: node_js
+build:
+  ci:
+    - echo 'CI is running'
+  post_ci:
+    - docker build -t="quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
+    - docker build -t="vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
+    - docker push quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER
+    - docker push vivex/node-web-app:$BRANCH.$BUILD_NUMBER
