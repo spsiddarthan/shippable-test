@@ -1,18 +1,19 @@
 language: node_js
-build_image: drydock/u14nod
+#build_image: drydock/u14nod
 build:
   ci:
     - echo 'CI is running'
     - npm install
     - npm start &
   post_ci:
-    - docker pull vivex/sample
-    - docker build -t="quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
-    - docker build -t="vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
-    - docker push quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER
-    - docker push vivex/node-web-app:$BRANCH.$BUILD_NUMBER
-    - docker tag vivex/node-web-app:$BRANCH.$BUILD_NUMBER 035214584383.dkr.ecr.us-east-1.amazonaws.com/node-web-app:$BRANCH.$BUILD_NUMBER
-    - docker push 035214584383.dkr.ecr.us-east-1.amazonaws.com/node-web-app:$BRANCH.$BUILD_NUMBER
+#    - docker pull vivex/sample
+#    - docker build -t="quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
+#    - docker build -t="vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
+#    - docker push quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER
+#    - docker push vivex/node-web-app:$BRANCH.$BUILD_NUMBER
+#    - docker tag vivex/node-web-app:$BRANCH.$BUILD_NUMBER 035214584383.dkr.ecr.us-east-1.amazonaws.com/node-web-app:$BRANCH.$BUILD_NUMBER
+#    - docker push 035214584383.dkr.ecr.us-east-1.amazonaws.com/node-web-app:$BRANCH.$BUILD_NUMBER
+    - docker pull drydock/u14nod:2016.02
 
 integrations:
   hub:
