@@ -7,3 +7,10 @@ build:
     - docker build -t="vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
     - docker push quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER
     - docker push vivex/node-web-app:$BRANCH.$BUILD_NUMBER
+
+integrations:
+  hub:
+    - integrationName: "quay-vivex"
+      type: quay.io
+    - integrationName: "docker-vivex"
+      type: docker
