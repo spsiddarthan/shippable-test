@@ -4,7 +4,7 @@ build:
   ci:
     - echo 'CI is running'
     - npm install
-    - npm start 
+    - npm start & 
   post_ci:
 #    - docker pull vivex/sample
     - docker build -t="quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
