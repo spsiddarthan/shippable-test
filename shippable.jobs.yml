@@ -9,3 +9,11 @@
         switch: off
       - TASK: managed
         bump: minor
+
+ - name: dv-prod-ecs
+    type: deploy
+    steps:
+      - IN: dv-rel
+        switch: off
+      - IN: env-prod-ecs
+      - TASK: managed

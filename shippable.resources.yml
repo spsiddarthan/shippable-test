@@ -2,3 +2,10 @@
    type: version
    seed:
       versionName: "1.0.0"
+
+  - name: env-prod-ecs
+    type: cluster
+    integration: demo-manishas-ecs
+    pointer:
+      sourceName : "demo-shippable-ecs-prod"
+      region: "us-east-1"
