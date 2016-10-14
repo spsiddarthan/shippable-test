@@ -23,3 +23,10 @@ integrations:
       type: docker
     - integrationName: "ecr-vivex"
       type: ecr
+  notifications:   
+    - integrationName: amal-project-trigger
+      type: webhook
+      on_start: never
+      on_success: change
+      on_failure: change
+      #on_pull_request: never
