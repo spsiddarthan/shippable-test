@@ -9,20 +9,20 @@ build:
 #    - docker pull vivex/sample
     - docker build -t="quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
 #    - docker build -t="vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
-    - docker push quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER
+#    - docker push quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER
 #    - docker push vivex/node-web-app:$BRANCH.$BUILD_NUMBER
 #    - docker tag vivex/node-web-app:$BRANCH.$BUILD_NUMBER 035214584383.dkr.ecr.us-east-1.amazonaws.com/node-web-app:$BRANCH.$BUILD_NUMBER
 #    - docker push 035214584383.dkr.ecr.us-east-1.amazonaws.com/node-web-app:$BRANCH.$BUILD_NUMBER
 #    - docker pull drydock/u14nod:2016.02
 
 integrations:
-  hub:
-    - integrationName: "quay-vivex"
-      type: quay.io
-    - integrationName: "docker-vivex"
-      type: docker
-    - integrationName: "ecr-vivex"
-      type: ecr
+#  hub:
+#    - integrationName: "quay-vivex"
+#      type: quay.io
+#    - integrationName: "docker-vivex"
+#      type: docker
+#    - integrationName: "ecr-vivex"
+#      type: ecr
   notifications:   
     - integrationName: amal-project-trigger
       type: webhook
