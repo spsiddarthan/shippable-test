@@ -18,10 +18,10 @@ build:
 integrations:
   hub:
    - integrationName: "email-int"
-      type: email
-      recipients:
-        - exampleone@org.com
-        - exampletwo@org.com
+     type: email
+     recipients:
+       - exampleone@org.com
+       - exampletwo@org.com
      on_success: always
      on_failure: always
 #  hub:
