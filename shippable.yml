@@ -19,6 +19,8 @@ integrations:
   hub:
    - integrationName: "email-int"
      type: docker
+     on_success: always
+     on_failure: always
 #  hub:
 #    - integrationName: "quay-vivex"
 #      type: quay.io
