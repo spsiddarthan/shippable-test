@@ -16,14 +16,18 @@ build:
 #    - docker pull drydock/u14nod:2016.02
 
 integrations:
-  hub:
-   - integrationName: "email-int"
-     type: email
-     recipients:
-       - exampleone@org.com
-       - exampletwo@org.com
-     on_success: always
-     on_failure: always
+   hub:
+    - integrationName: email
+      type: email
+      recipients:
+        - exampleone@org.com
+        - exampletwo@org.com
+      branches:
+        only:
+          - master
+          - dev
+      on_success: always
+      on_failure: always
 #  hub:
 #    - integrationName: "quay-vivex"
 #      type: quay.io
