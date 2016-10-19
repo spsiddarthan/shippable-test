@@ -3,8 +3,8 @@ language: node_js
 build:
   ci:
     - echo 'CI is running'
-    - npm install
-    - npm start & 
+#    - npm install
+#    - npm start & 
   post_ci:
 #    - docker pull vivex/sample
 #    - docker build -t="quay.io/vivex/node-web-app:$BRANCH.$BUILD_NUMBER" .
@@ -31,11 +31,3 @@ integrations:
 #      type: docker
 #    - integrationName: "ecr-vivex"
 #      type: ecr
-  notifications:   
-    - integrationName: amal-project-trigger
-      type: webhook
-      on_start: never
-      on_success: always
-      on_failure: always
-      on_cancel: always
-      #on_pull_request: never
