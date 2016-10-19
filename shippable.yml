@@ -18,7 +18,7 @@ build:
 integrations:
   hub:
    - integrationName: "email-int"
-     type: email
+     type: docker
 #  hub:
 #    - integrationName: "quay-vivex"
 #      type: quay.io
